@@ -20,6 +20,26 @@ h1{
 
 }
 
+.day,
+.hour,
+.minute,
+.second{
+
+    font-size : 1rem;
+    font-weight : bold;
+
+
+}
+
+.tday,
+.thour,
+.tmin,
+.tsec{
+
+    text-align : center;
+
+}
+
 
 .timer{
     display : flex;
