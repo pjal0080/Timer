@@ -46,3 +46,17 @@ h1{
     justify-content : space-around;
 
 }
+
+
+.buttons{
+    display : flex;
+    justify-content : center;
+    padding : 4rem;
+    column-gap : 1.75rem;
+
+}
+
+#start,
+#reset{
+    font-size : 25px;
+}

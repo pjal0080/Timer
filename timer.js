@@ -1,27 +1,47 @@
-const timer = () => {
+var start = document.getElementById("start");
+var reset = document.getElementById("reset");
 
-    const timerDate = new Date("September 30, 2021 12:00:00").getTime();
-    const currDate = new Date().getTime();
+const hour = document.getElementById("thour");
+const min = document.getElementById("tmin");
+const sec = document.getElementById("tsec");
+var countdownTimer = null;
 
-    const diff = timerDate - currDate;
+start.addEventListener('click', function(){
 
-    const sec = 1000;
-    const min = sec * 60;
-    const hour = min * 60;
-    const day = 24 * hour;
+    function startTimer()
+    {
+        countdownTimer =  setInterval(timer,1000);
+    }
 
-    const timerDay = Math.floor(diff/day);
-    const timerHour = Math.floor((diff%day)/hour);
-    const timerMin = Math.floor((diff%hour)/min);
-    const timerSec = Math.floor((diff%min)/sec);
+        startTimer();
 
-    document.querySelector(".tday").innerText = timerDay;
-    document.querySelector(".thour").innerText = timerHour;
-    document.querySelector(".tmin").innerText = timerMin;
-    document.querySelector(".tsec").innerText = timerSec;
-
-};
+})
 
 
+reset.addEventListener('click', function(){
+    hour.value = 0;
+    min.value = 0;
+    sec.value = 0
+    clearInterval(countdownTimer);
 
-setInterval(timer,1000);
+})
+
+const timer =  () =>{
+
+if(hour.value == 0 && min .value== 0 && sec.value == 0){
+        hour.value = 0;
+        min.value = 0;
+        sec.value = 0;
+    } else if(sec.value != 0){
+        sec.value--;
+    } else if(min.value != 0 && sec.value == 0){
+        sec.value = 59;
+        min.value--;
+    } else if(hour.value != 0 && min.value == 0){
+        min.value = 60;
+        hour.value--;
+    }
+    return;
+}
+
+
