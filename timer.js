@@ -26,7 +26,7 @@ reset.addEventListener('click', function(){
 
 })
 
-const timer =  () =>{
+const timer = () => {
 
 if(hour.value == 0 && min .value== 0 && sec.value == 0){
         hour.value = 0;
@@ -41,7 +41,7 @@ if(hour.value == 0 && min .value== 0 && sec.value == 0){
         min.value = 60;
         hour.value--;
     }
-    return;
+   
 }
 
 

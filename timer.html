@@ -5,41 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown Timer</title>
     <link rel="stylesheet" href="timer.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <body>
+    <section>
+        <div class = "container">
 
-    <div class = "container">
-            <div>
-            <h1>Countdown Timer till Sep 30,2021(12 PM)</h1>
             <div class = "timer">
-
-                <div class = "hour">
+                <div class = "time-colon">
+                    <div class="time-text">
                     <input type = "number" max="100" min = "0" value = "0" id = "thour">
-                    <h3>Hour</h3>
+                    <span class="text">Hours</span>
+                    </div>
+                    <span class="colon">:</span>
                 </div>
 
-                <div class = "minute">
-                    <input type = "number" max="60" min = "0" value = "0" id = "tmin">
-                    <h3>Minute</h3>
+                <div class = "time-colon">
+                    <div class = "time-text">
+                        <input type = "number" max="60" min = "0" value = "0" id = "tmin">
+                        <span class="text">Minutes</span>
+                    </div>
+                    <span class="colon">:</span>
                 </div>
 
-                <div class = "second">
-                    <input type = "number" max="60" min = "0" value = "0" id = "tsec">
-                    <h3>Second</h3>
+                <div class = "time-colon">
+                    <div class = "time-text">
+                        <input type = "number" max="60" min = "0" value = "0" id = "tsec">
+                        <span class="text">Seconds</span>
+                    </div>
                 </div>
 
             </div>
 
-                <div class = "buttons">
-                    <button  id = "start">Start</button>
-                    <button  id = "reset">Reset</button>
-                </div>
+               
 
             </div>
+            <div class = "buttons">
+                <button  id = "start">Start</button>
+                <button  id = "reset">Reset</button>
+            </div>
 
-    </div>
-
-
+    </section>
+    
     <script src="timer.js"></script>
 </body>
 </html>
