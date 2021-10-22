@@ -5,15 +5,23 @@ const hour = document.getElementById("thour");
 const min = document.getElementById("tmin");
 const sec = document.getElementById("tsec");
 var countdownTimer = null;
-
+var count = 0;
 start.addEventListener('click', function(){
 
+   
     function startTimer()
     {
         countdownTimer =  setInterval(timer,1000);
     }
 
-        startTimer();
+       
+        if(count == 0){
+            startTimer();
+            start.disabled = true;
+            count += 1;
+        }
+
+        
 
 })
 
@@ -23,6 +31,12 @@ reset.addEventListener('click', function(){
     min.value = 0;
     sec.value = 0
     clearInterval(countdownTimer);
+
+    if(count == 1){
+        start.disabled = false;
+        count = 0;
+    }
+
 
 })
 
@@ -38,7 +52,12 @@ if(hour.value == 0 && min .value== 0 && sec.value == 0){
         sec.value = 59;
         min.value--;
     } else if(hour.value != 0 && min.value == 0){
-        min.value = 60;
+        if(sec.value == 0){
+            min.value = 59;
+            sec.value = 59;
+        }
+
+        
         hour.value--;
     }
    
