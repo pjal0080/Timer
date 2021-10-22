@@ -49,23 +49,11 @@ section .container{
 
 }
 
-.day,
-.hour,
-.minute,
-.second{
+#thour,
+#tmin,
+#tsec{
 
-    font-size : 1rem;
-    font-weight : bold;
-
-
-}
-
-.tday,
-.thour,
-.tmin,
-.tsec{
-
-    text-align : center;
+    font-weight: bold;
 
 }
 
